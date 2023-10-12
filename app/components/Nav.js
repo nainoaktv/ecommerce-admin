@@ -2,9 +2,11 @@ import Link from "next/link";
 import React from "react";
 
 const Nav = () => {
+  const inactiveLink = "flex gap-1 p-1";
+  const activeLink = inactiveLink + " bg-black text-yellow-600 rounded-l-lg";
   return (
-    <aside className="text-white p-4">
-      <Link href={"/"} className="flex gap-1 mb-4">
+    <aside className="text-white p-4 pr-0">
+      <Link href={"/"} className="flex gap-1 mb-4 mr-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -22,7 +24,8 @@ const Nav = () => {
         <span>eCommerceAdmin</span>
       </Link>
       <nav className="flex flex-col gap-2">
-        <Link href={"/"} className="flex gap-1">
+        {/* DASHBOARD */}
+        <Link href={"/"} className={activeLink}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -39,7 +42,8 @@ const Nav = () => {
           </svg>
           Dashboard
         </Link>
-        <Link href={"/"} className="flex gap-1">
+        {/* PRODUCTS */}
+        <Link href={"/products"} className="flex gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -56,7 +60,8 @@ const Nav = () => {
           </svg>
           Products
         </Link>
-        <Link href={"/"} className="flex gap-1">
+        {/* ORDERS */}
+        <Link href={"/orders"} className="flex gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -73,7 +78,8 @@ const Nav = () => {
           </svg>
           Orders
         </Link>
-        <Link href={"/"} className="flex gap-1">
+        {/* SETTINGS */}
+        <Link href={"/settings"} className="flex gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
