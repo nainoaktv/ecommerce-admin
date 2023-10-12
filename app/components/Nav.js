@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Nav = () => {
   const inactiveLink = "flex gap-1 p-1";
   const activeLink = inactiveLink + " bg-black text-yellow-600 rounded-l-lg";
+  const pathname = usePathname();
   return (
     <aside className="text-white p-4 pr-0">
       <Link href={"/"} className="flex gap-1 mb-4 mr-5">
@@ -25,7 +27,10 @@ const Nav = () => {
       </Link>
       <nav className="flex flex-col gap-2">
         {/* DASHBOARD */}
-        <Link href={"/"} className={activeLink}>
+        <Link
+          href={"/"}
+          className={`link ${pathname === "/" ? activeLink : inactiveLink}`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -43,7 +48,12 @@ const Nav = () => {
           Dashboard
         </Link>
         {/* PRODUCTS */}
-        <Link href={"/products"} className="flex gap-1">
+        <Link
+          href={"/products"}
+          className={`link ${
+            pathname === "/products" ? activeLink : inactiveLink
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -61,7 +71,12 @@ const Nav = () => {
           Products
         </Link>
         {/* ORDERS */}
-        <Link href={"/orders"} className="flex gap-1">
+        <Link
+          href={"/orders"}
+          className={`link ${
+            pathname === "/orders" ? activeLink : inactiveLink
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -79,7 +94,12 @@ const Nav = () => {
           Orders
         </Link>
         {/* SETTINGS */}
-        <Link href={"/settings"} className="flex gap-1">
+        <Link
+          href={"/settings"}
+          className={`link ${
+            pathname === "/settings" ? activeLink : inactiveLink
+          }`}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
