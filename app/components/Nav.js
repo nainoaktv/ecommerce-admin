@@ -4,7 +4,7 @@ import React from "react";
 
 const Nav = () => {
   const inactiveLink = "flex gap-1 p-1";
-  const activeLink = inactiveLink + " bg-black text-yellow-600 rounded-l-lg";
+  const activeLink = inactiveLink + " bg-white text-yellow-600 rounded-l-lg";
   const pathname = usePathname();
   return (
     <aside className="text-white p-4 pr-0">

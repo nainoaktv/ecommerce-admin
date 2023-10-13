@@ -7,7 +7,7 @@ export default function Products() {
       <div className="max-w-max">
         <Link
           href={"/products/new"}
-          className="flex bg-emerald-400 rounded-md bg m-2 py-1 px-2"
+          className="flex bg-slate-300 rounded-md bg m-2 py-1 px-2 transition-colors duration-300 hover:bg-yellow-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

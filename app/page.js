@@ -9,9 +9,9 @@ export default function Home() {
     <Layout>
       <div className="flex justify-between">
         <h2>
-          Hello, <b>{session?.user?.name}</b>
+          Hello, <b className="text-yellow-600">{session?.user?.name}!</b>
         </h2>
-        <div className="flex bg-yellow-600 gap-1 rounded-lg">
+        <div className="flex bg-slate-300 gap-1 rounded-lg">
           <img
             src={session?.user?.image}
             alt="user image"

@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-input {
-  @apply border-2 border-black rounded-md px-1;
+input,
+textarea {
+  @apply border-2 border-slate-300 rounded-md px-1 w-full;
+  @apply mb-2;
+}
+
+input:focus,
+textarea:focus {
+  @apply outline-none transition-colors duration-300  border-emerald-900;
+}
+
+h1 {
+  @apply text-yellow-600 mb-4 p-2 text-2xl font-sans;
 }
