@@ -8,7 +8,9 @@ export default function Home() {
   return (
     <Layout>
       <div className="flex justify-between">
-        <h2>Hello, {session?.user?.name}</h2>
+        <h2>
+          Hello, <b>{session?.user?.name}</b>
+        </h2>
         <div className="flex bg-yellow-600 gap-1 rounded-lg">
           <img
             src={session?.user?.image}
