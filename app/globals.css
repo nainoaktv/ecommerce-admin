@@ -16,3 +16,11 @@ textarea:focus {
 h1 {
   @apply text-yellow-600 mb-4 p-2 text-2xl font-sans;
 }
+
+table.basic {
+  @apply w-full;
+}
+
+table.basic tr td {
+  @apply border border-yellow-600 p-1;
+}
