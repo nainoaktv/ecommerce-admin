@@ -32,7 +32,7 @@ export default function EditProductForm({
       }
 
       router.refresh();
-      router.push("/");
+      router.push("/products");
     } catch (error) {
       console.log(error);
     }
@@ -40,6 +40,7 @@ export default function EditProductForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+      <h2>Product Name</h2>
       <input
         onChange={(e) => setNewProductName(e.target.value)}
         value={newProductName}
@@ -48,6 +49,7 @@ export default function EditProductForm({
         placeholder="Product Name"
       />
 
+      <h2>Product Description</h2>
       <input
         onChange={(e) => setNewDescription(e.target.value)}
         value={newDescription}
@@ -56,6 +58,7 @@ export default function EditProductForm({
         placeholder="Product Description"
       />
 
+      <h2>Price (USD)</h2>
       <input
         onChange={(e) => setNewPrice(e.target.value)}
         value={newPrice}
@@ -64,7 +67,7 @@ export default function EditProductForm({
         placeholder="Price"
       />
 
-      <button className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
+      <button className="bg-emerald-900 font-bold text-white py-3 px-6 w-fit rounded-lg hover:bg-yellow-600">
         Update Product
       </button>
     </form>
