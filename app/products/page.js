@@ -9,7 +9,7 @@ export default function Products() {
 
   useEffect(() => {
     axios.get("/api/products").then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setProducts(response.data);
     });
   }, []);
@@ -50,6 +50,7 @@ export default function Products() {
               <td>{p.productName}</td>
               <td>
                 <Link href={`/products/${p._id}`}>
+                  {console.log(p._id)}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
