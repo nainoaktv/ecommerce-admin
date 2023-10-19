@@ -13,3 +13,10 @@ export async function GET() {
   await mongooseConnect();
   return NextResponse.json(await Product.find());
 }
+
+export async function DELETE(request) {
+  const id = request.nextUrl.searchParams.get("id");
+  await mongooseConnect();
+  await Product.findByIdAndDelete(id);
+  return NextResponse.json({ message: "Product deleted" }, { status: 200 });
+}
