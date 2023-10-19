@@ -50,7 +50,7 @@ export default function Products() {
               <td>{p.productName}</td>
               <td>
                 <Link href={`/products/${p._id}`}>
-                  {console.log(p._id)}
+                  {/* {console.log(p._id)} */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
