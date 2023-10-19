@@ -23,13 +23,19 @@ const getProductById = async (id) => {
 
 export default async function EditProductPage({ params }) {
   const { id } = params;
-  const product = await getProductById(id);
+  const { product } = await getProductById(id);
   const { productName, description, price } = product;
   console.log(`id for this product: ${id}`);
 
   return (
     <Layout>
-      <EditProductForm />
+      {/* ADD */}
+      <EditProductForm
+        id={id}
+        productName={productName}
+        description={description}
+        price={price}
+      />
     </Layout>
   );
 }
