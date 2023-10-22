@@ -1,8 +1,5 @@
 "use client";
 import Layout from "@/app/components/Layout";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useRouter } from "next/navigation";
 import EditProductForm from "@/app/components/EditProductForm";
 
 const getProductById = async (id) => {

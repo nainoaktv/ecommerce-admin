@@ -9,7 +9,6 @@ export default function Products() {
 
   useEffect(() => {
     axios.get("/api/products").then((response) => {
-      // console.log(response.data);
       setProducts(response.data);
     });
   }, []);
@@ -67,7 +66,7 @@ export default function Products() {
                   </svg>
                   Edit
                 </Link>
-                {/* <Link href={`/products/${p._id}`}>
+                <Link href={`/products/delete/${p._id}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -83,7 +82,7 @@ export default function Products() {
                     />
                   </svg>
                   Delete
-                </Link> */}
+                </Link>
               </td>
             </tr>
           ))}
