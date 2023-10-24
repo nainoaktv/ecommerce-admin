@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 export default function DeleteProductPage({ params }) {
   const { id } = params;
-  const [productInfo, setProductInfo] = useState();
+  const [productInfo, setProductInfo] = useState([]);
   const router = useRouter();
 
   useEffect(() => {
@@ -33,10 +33,15 @@ export default function DeleteProductPage({ params }) {
       <h1 className="text-center">
         DELETE &nbsp;"{productInfo?.productName}"?
       </h1>
-      <button onClick={removeProduct}>Yes</button>
-      <button onClick={goBack} className="flex">
-        No
-      </button>
+
+      <div className="flex gap-2 justify-center">
+        <button className="btn-red" onClick={removeProduct}>
+          Yes
+        </button>
+        <button className="btn-default" onClick={goBack}>
+          No
+        </button>
+      </div>
     </Layout>
   );
 }
