@@ -26,7 +26,7 @@ export default async function EditProductPage({ params }) {
 
   return (
     <Layout>
-      {/* ADD */}
+      <h1>Edit Product</h1>
       <EditProductForm
         id={id}
         productName={productName}

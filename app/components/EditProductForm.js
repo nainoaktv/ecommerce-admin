@@ -40,29 +40,26 @@ export default function EditProductForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <h2>Product Name</h2>
+      <label>Product Name</label>
       <input
         onChange={(e) => setNewProductName(e.target.value)}
         value={newProductName}
-        className="border border-slate-500 px-8 py-2"
         type="text"
         placeholder="Product Name"
       />
 
-      <h2>Product Description</h2>
-      <input
+      <label>Product Description</label>
+      <textarea
         onChange={(e) => setNewDescription(e.target.value)}
         value={newDescription}
-        className="border border-slate-500 px-8 py-2"
         type="text"
         placeholder="Product Description"
       />
 
-      <h2>Price (USD)</h2>
+      <label>Price (USD)</label>
       <input
         onChange={(e) => setNewPrice(e.target.value)}
         value={newPrice}
-        className="border border-slate-500 px-8 py-2"
         type="text"
         placeholder="Price"
       />

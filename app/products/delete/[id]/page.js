@@ -31,7 +31,7 @@ export default function DeleteProductPage({ params }) {
   return (
     <Layout>
       <h1 className="text-center">
-        DELETE &nbsp;"{productInfo?.product?.productName}"?
+        Do you want to DELETE &nbsp;"{productInfo?.product?.productName}"?
       </h1>
 
       <div className="flex gap-2 justify-center">
@@ -39,7 +39,7 @@ export default function DeleteProductPage({ params }) {
           Yes
         </button>
         <button className="btn-default" onClick={goBack}>
-          No
+          NO!
         </button>
       </div>
     </Layout>
