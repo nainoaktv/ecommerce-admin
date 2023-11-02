@@ -47,6 +47,8 @@ export default function EditProductForm({
         type="text"
         placeholder="Product Name"
       />
+      <label>Photos</label>
+      <div></div>
 
       <label>Product Description</label>
       <textarea
